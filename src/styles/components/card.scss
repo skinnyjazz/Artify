@@ -1,0 +1,50 @@
+.card {
+  border-radius: 16px;
+  background: #444;
+
+  position: relative;
+  overflow: hidden;
+
+  &--small {
+    grid-row-end: span 30;
+  }
+  &--medium {
+    grid-row-end: span 40;
+  }
+  &--large {
+    grid-row-end: span 43;
+  }
+
+  &__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &__content {
+    width: 100%;
+    height: 100%;
+    background: rgba(60, 52, 52, 0.373);
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s ease-in-out;
+    cursor: pointer;
+
+    &:hover {
+      backdrop-filter: blur(0px);
+      background: rgba(60, 52, 52, 0);
+    }
+  }
+
+  &__content-wrap {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 95%;
+    padding: 10px;
+  }
+}

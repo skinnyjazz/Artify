@@ -1,0 +1,17 @@
+.header {
+  padding: 16px 32px;
+  border-bottom: 1px solid silver;
+  background-color: #c5c5c5;
+  position: sticky;
+  top: 0;
+  background-color: white;
+  // margin-bottom: 32px;
+  margin-bottom: 0;
+  z-index: 10;
+  
+  &__logo {
+    text-decoration: "none";
+    color: "inherit";
+    color: rgba(248, 58, 10, 0.871);
+  }
+}

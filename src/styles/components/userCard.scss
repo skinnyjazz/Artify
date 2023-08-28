@@ -1,0 +1,47 @@
+.user-card {
+  padding: 10px;
+  margin: 0 10px;
+
+  background: rgba(255, 255, 255, 0);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(13.4px);
+  -webkit-backdrop-filter: blur(13.4px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+
+  &__info {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+  }
+  &__avatar {
+    border-radius: 100%;
+    overflow: hidden;
+    width: 60px;
+    height: 60px;
+  }
+  &__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  &__username {
+    font-size: 16px;
+    font-weight: 800;
+
+    @include onPortable {
+      font-size: 32px;
+      line-height: 41px;
+    }
+    color: rgb(65, 65, 65);
+  }
+  &__bio {
+    margin-top: 10px;
+    font-size: 12px;
+    font-weight: 500;
+    @include onPortable {
+      font-size: 18px;
+    }
+    color: rgb(117, 117, 117);
+  }
+}

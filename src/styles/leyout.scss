@@ -1,0 +1,36 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @include montserrat;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+}
+
+h1 {
+  @include h1;
+}
+
+h2 {
+  @include h2;
+}
+
+h3 {
+  @include h3;
+}
+
+h4 {
+  @include h4;
+}
+
+.text {
+  @include text;
+}
+
+.small-text {
+  @include small-text;
+}
