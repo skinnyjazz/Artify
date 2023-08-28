@@ -1,16 +1,18 @@
 {
   "files": {
-    "main.css": "/Artify/static/css/main.073c9b0a.css",
-    "main.js": "/Artify/static/js/main.5bff1884.js",
-    "static/js/787.d7e7aaf3.chunk.js": "/Artify/static/js/787.d7e7aaf3.chunk.js",
-    "static/media/logo.svg": "/Artify/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "main.css": "/Artify/static/css/main.32e64d21.css",
+    "main.js": "/Artify/static/js/main.178ee00b.js",
+    "static/media/Hero_3.jpg": "/Artify/static/media/Hero_3.489e5f2b2a02cbe83050.jpg",
+    "static/media/Hero_1.jpg": "/Artify/static/media/Hero_1.fe03d0f5db9bdd84a1a0.jpg",
+    "static/media/Hero_2.jpg": "/Artify/static/media/Hero_2.cedb763d418d67e572ee.jpg",
+    "static/media/Hero_5.jpg": "/Artify/static/media/Hero_5.91fa5b68b86b8561ed50.jpg",
+    "static/media/Hero_4.jpg": "/Artify/static/media/Hero_4.0d8c2472f4448451f863.jpg",
     "index.html": "/Artify/index.html",
-    "main.073c9b0a.css.map": "/Artify/static/css/main.073c9b0a.css.map",
-    "main.5bff1884.js.map": "/Artify/static/js/main.5bff1884.js.map",
-    "787.d7e7aaf3.chunk.js.map": "/Artify/static/js/787.d7e7aaf3.chunk.js.map"
+    "main.32e64d21.css.map": "/Artify/static/css/main.32e64d21.css.map",
+    "main.178ee00b.js.map": "/Artify/static/js/main.178ee00b.js.map"
   },
   "entrypoints": [
-    "static/css/main.073c9b0a.css",
-    "static/js/main.5bff1884.js"
+    "static/css/main.32e64d21.css",
+    "static/js/main.178ee00b.js"
   ]
 }
