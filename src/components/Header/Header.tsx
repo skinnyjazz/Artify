@@ -5,7 +5,7 @@ export const Header = () => {
   return (
     <header className="header">
       <h1 className="logo header__logo">
-        <Link to={"/"} style={{ textDecoration: "none", color: "inherit" }}>
+        <Link to={"/Artify"} style={{ textDecoration: "none", color: "inherit" }}>
           Gallery
         </Link>
       </h1>

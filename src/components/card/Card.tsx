@@ -15,7 +15,7 @@ export const Card: FC<Props> = ({ cardSize, photo }) => {
   const { urls, user } = photo;
 
   return (
-    <Link to={`/${photo.id}`} className={`card card--${cardSize}`}>
+    <Link to={`/Artify/${photo.id}`} className={`card card--${cardSize}`}>
       <img src={urls.regular} alt="" className="card__img" />
 
       <div className="card__content">

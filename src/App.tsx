@@ -8,10 +8,12 @@ const App = () => {
   useScrollToTop();
   return (
     <div className="App">
-      <Header />
+      {/* <Header /> */}
       <Outlet />
     </div>
   );
 };
+
+
 
 export default App;

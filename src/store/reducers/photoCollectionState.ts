@@ -20,10 +20,11 @@ export const photoSlice = createSlice({
     incrementPage: (state) => {
       state.page += 1;
     },
-    getPhotos: (state, payload) => {
+    getPhotos: (state, action) => {
       state.isLoading = true;
     },
     getPhotosSuccess: (state, action) => {
+      console.log(action)
       state.photos = [...state.photos, ...action.payload];
       state.isLoading = false;
     },

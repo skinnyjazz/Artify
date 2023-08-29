@@ -6,6 +6,7 @@ import { getPhotosSuccess } from "../reducers/photoCollectionState";
 function* workGetPhotos(action: any): PhotosCollection | any {
   const { page, per_page } = action.payload;
 
+  console.log(action);
   const photos = yield call(getPhotos, page, per_page);
 
   yield put(getPhotosSuccess(photos));
