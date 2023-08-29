@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Artify/static/css/main.9e57fbd7.css",
-    "main.js": "/Artify/static/js/main.7586b163.js",
+    "main.js": "/Artify/static/js/main.9351845b.js",
     "static/media/Hero_3.jpg": "/Artify/static/media/Hero_3.489e5f2b2a02cbe83050.jpg",
     "static/media/Hero_1.jpg": "/Artify/static/media/Hero_1.fe03d0f5db9bdd84a1a0.jpg",
     "static/media/Hero_2.jpg": "/Artify/static/media/Hero_2.cedb763d418d67e572ee.jpg",
@@ -9,10 +9,10 @@
     "static/media/Hero_4.jpg": "/Artify/static/media/Hero_4.0d8c2472f4448451f863.jpg",
     "index.html": "/Artify/index.html",
     "main.9e57fbd7.css.map": "/Artify/static/css/main.9e57fbd7.css.map",
-    "main.7586b163.js.map": "/Artify/static/js/main.7586b163.js.map"
+    "main.9351845b.js.map": "/Artify/static/js/main.9351845b.js.map"
   },
   "entrypoints": [
     "static/css/main.9e57fbd7.css",
-    "static/js/main.7586b163.js"
+    "static/js/main.9351845b.js"
   ]
 }
