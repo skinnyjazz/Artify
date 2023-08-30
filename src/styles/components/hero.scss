@@ -35,23 +35,23 @@
     flex: 1 0 20%;
 
     &:nth-child(1),
-    &:nth-child(2),
+    &:nth-child(3),
     &:nth-child(4),
-    &:nth-child(5) {
+    &:nth-child(2) {
       display: none;
     }
 
     @include onPortable {
-      &:nth-child(2),
+      &:nth-child(3),
       &:nth-child(1) {
         display: block;
       }
     }
     @include onDesktop {
       &:nth-child(1),
-      &:nth-child(2),
+      &:nth-child(3),
       &:nth-child(4),
-      &:nth-child(5) {
+      &:nth-child(2) {
         display: block;
       }
     }
