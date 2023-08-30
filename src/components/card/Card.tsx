@@ -1,6 +1,6 @@
 import { FC } from "react";
 import LikeButton from "../ui/likeButton/LikeButton";
-import UserInfo from "../userInfo/UserInfo";
+import UserInfo from "../ui/userInfo/UserInfo";
 import { Photo } from "../../types/photo";
 import { Link } from "react-router-dom";
 
