@@ -4,4 +4,4 @@ import hero_3 from "./Hero_3.jpg";
 import hero_4 from "./Hero_4.jpg";
 import hero_5 from "./Hero_5.jpg";
 
-export const heroSectionAssets = [hero_1, hero_2, hero_3, hero_4, hero_5];
+export const heroSectionAssets = [hero_5, hero_3, hero_4, hero_1, hero_2];

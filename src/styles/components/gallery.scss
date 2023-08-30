@@ -2,7 +2,35 @@
   margin-top: 32px;
   height: auto;
   display: grid;
-  grid-template-columns: repeat(auto-fill, 350px);
+  grid-template-columns: repeat(auto-fill, auto);
   gap: 5px;
   justify-content: center;
+  padding: 10px;
+
+  @include onPortable {
+    grid-template-columns: repeat(auto-fill, 350px);
+
+  }
+
+  &__item {
+    border-radius: 16px;
+    background: #444;
+    position: relative;
+    overflow: hidden;
+
+
+    @include onPortable {
+      width: auto;
+    }
+
+    &--small {
+      grid-row-end: span 30;
+    }
+    &--medium {
+      grid-row-end: span 40;
+    }
+    &--large {
+      grid-row-end: span 43;
+    }
+  }
 }

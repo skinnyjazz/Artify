@@ -12,8 +12,8 @@
     border-radius: 6px;
     border: 1px solid transparent;
     font-family: 'Montserrat', sans-serif;
-    font-size: 16px;
-    letter-spacing: 2px;
+    font-size: 12px;
+    letter-spacing: 1px;
     font-weight: bold;
     color: rgb(37, 30, 30);
 
@@ -36,12 +36,14 @@
 
         &:hover {
             color: black;
-            font-size: 1.4rem;
-        }
+            // font-size: 1.4rem;
+            transform:translateY(-50%) rotate(0.5turn) scale(105%) translateZ(20px);
+            
+}
     }
   
     &::placeholder {
-        letter-spacing: normal;
+      letter-spacing: normal;
       color:rgba(12, 12, 12, 0.181);
     }
 

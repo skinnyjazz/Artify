@@ -1,6 +1,6 @@
 import {MouseEventHandler} from 'react'
 
-const initialTranding: string[] = ['Nature', 'Ocean', 'Moon Landscape', 'Cats']
+const initialTranding: string[] = ['Nature', 'Ocean', 'Cats']
 
 export const Tranding = () => {
 
@@ -12,7 +12,6 @@ export const Tranding = () => {
     <section className="tranding">
     <h5 className="tranding__heading">Tranding:</h5>
     <ul className="tranding__list">
-
       {initialTranding.map(trand => (
         <li className="tranding__item">
             <a href="" onClick={handleTrand}>{trand}</a>

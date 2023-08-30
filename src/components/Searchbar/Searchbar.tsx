@@ -9,7 +9,7 @@ export const Searchbar = () => {
         </button>
         <input
             type="text"
-            placeholder="Search high-resolution images"
+            placeholder="Find inspiration!"
             className="searchbar searchbar--large"
         />
     </div>

@@ -1,40 +1,44 @@
 .tranding {
+  display: none;
+  align-items: center;
+  gap: 12px;
+
+  @include onPortable {
     display: flex;
-    align-items: center;
+  }
+
+  &__heading {
+    color: white;
+  }
+  &__list {
+    display: flex;
     gap: 12px;
+  }
+  &__item {
+    pointer-events: all;
+    display: inline;
+    @include montserrat;
+    background-color: white;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 14px;
+    letter-spacing: 2px;
+    border: 1px solid transparent;
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+  &__item:hover {
+    background: #00000000;
+    border: 1px solid white;
 
-    &__heading{
-        color: white;
+    & > a {
+      color: white;
     }
-    &__list{
-        display: flex;
-        gap: 12px;
-    }
-    &__item{
-        pointer-events: all;
-        box-sizing: border-box;
-        @include montserrat;
-        background-color: white;
-        border-radius: 5px;
-        font-weight: bold;
-        font-size: 14px;
-        letter-spacing: 2px;
-        border: 1px solid transparent;
-        transition: all 0.3s ease;
-        cursor: pointer;
-    }
-    &__item:hover {
-        background: #00000000;
-        border: 1px solid white;
-
-        & > a {
-            color: white;
-        }
-    }
-    &__item > a {
-        display: block;
-        padding: 4px 5px;
-        text-decoration: none;
-        color: rgba(0, 0, 0, 0.7);
-    }
+  }
+  &__item > a {
+    display: block;
+    padding: 4px 5px;
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.7);
+  }
 }

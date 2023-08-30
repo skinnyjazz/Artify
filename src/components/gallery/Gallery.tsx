@@ -13,7 +13,11 @@ const Gallery: FC<Props> = ({ photos }) => {
       {photos.map((photo, index) => {
         const size = getCardSize(index);
 
-        return <Card key={photo.id} cardSize={size} photo={photo} />;
+        return (
+          <div className={`gallery__item gallery__item--${size}`}>
+            <Card key={photo.id} cardSize={size} photo={photo} />
+          </div>
+        );
       })}
     </section>
   );

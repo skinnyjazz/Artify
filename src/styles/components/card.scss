@@ -1,20 +1,4 @@
 .card {
-  border-radius: 16px;
-  background: #444;
-
-  position: relative;
-  overflow: hidden;
-
-  &--small {
-    grid-row-end: span 30;
-  }
-  &--medium {
-    grid-row-end: span 40;
-  }
-  &--large {
-    grid-row-end: span 43;
-  }
-
   &__img {
     width: 100%;
     height: 100%;
@@ -24,7 +8,7 @@
   &__content {
     width: 100%;
     height: 100%;
-    background: rgba(60, 52, 52, 0.373);
+    background: rgba(60, 52, 52, 0);
     position: absolute;
     bottom: 0;
     display: flex;
@@ -35,7 +19,7 @@
 
     &:hover {
       backdrop-filter: blur(0px);
-      background: rgba(60, 52, 52, 0);
+      background: rgba(60, 52, 52, 0.4);
     }
   }
 
