@@ -1,17 +1,16 @@
 {
   "files": {
-    "main.css": "/Artify/static/css/main.f8449dee.css",
-    "main.js": "/Artify/static/js/main.d00f3fc7.js",
+    "main.css": "/Artify/static/css/main.e10cbc68.css",
+    "main.js": "/Artify/static/js/main.c67c241c.js",
     "static/media/Hero_3.jpg": "/Artify/static/media/Hero_3.e8116ab743af7652c887.jpg",
     "static/media/Hero_5.jpg": "/Artify/static/media/Hero_5.b7e2430d4b62fe3279a8.jpg",
-    "static/media/Hero_2.jpg": "/Artify/static/media/Hero_2.5a41f351dd4314973483.jpg",
     "static/media/Hero_4.jpg": "/Artify/static/media/Hero_4.78970466310954356fc9.jpg",
     "index.html": "/Artify/index.html",
-    "main.f8449dee.css.map": "/Artify/static/css/main.f8449dee.css.map",
-    "main.d00f3fc7.js.map": "/Artify/static/js/main.d00f3fc7.js.map"
+    "main.e10cbc68.css.map": "/Artify/static/css/main.e10cbc68.css.map",
+    "main.c67c241c.js.map": "/Artify/static/js/main.c67c241c.js.map"
   },
   "entrypoints": [
-    "static/css/main.f8449dee.css",
-    "static/js/main.d00f3fc7.js"
+    "static/css/main.e10cbc68.css",
+    "static/js/main.c67c241c.js"
   ]
 }
