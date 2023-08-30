@@ -1,19 +1,19 @@
-import React from "react";
+import { useEffect, useMemo } from "react";
 import { heroSectionAssets } from "../../assets/assets";
-import { BsSearch } from 'react-icons/bs'
 import { Searchbar } from "../Searchbar/Searchbar";
 import { Tranding } from "../Tranding/Tranding";
+import { NodeRuntime } from "inspector";
+import { HeroBG } from "./HeroBG";
+
+
+
 
 export const Hero = () => {
+
   return (
     <section className="hero-section">
-      <div className="hero-section__bg">
-        {heroSectionAssets.map((img) => (
-          <div className="hero-section__item">
-            <img src={img} alt="" />
-          </div>
-        ))}
-      </div>
+
+      <HeroBG imges={heroSectionAssets} />
 
       <div className="hero-section__content">
         <div className="hero-section__content__wrapper">
