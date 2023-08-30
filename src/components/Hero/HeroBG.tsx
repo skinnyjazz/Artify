@@ -5,7 +5,7 @@ type Props = {
   imges: string[];
 };
 
-export const HeroBG: FC<Props> = memo(({ imges }) => {
+export const HeroBG: FC<Props> = ({ imges }) => {
   return (
     <div className="hero-section__bg">
       {imges.map((img) => (
@@ -21,4 +21,4 @@ export const HeroBG: FC<Props> = memo(({ imges }) => {
       ))}
     </div>
   );
-});
+};

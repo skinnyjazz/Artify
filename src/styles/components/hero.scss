@@ -39,23 +39,22 @@
     height: "100%";
 
     &:nth-child(1),
-    &:nth-child(3),
-    &:nth-child(4),
-    &:nth-child(2) {
+    &:nth-child(2),
+    &:nth-child(3) {
       display: none;
     }
 
     @include onPortable {
-      &:nth-child(3),
+
       &:nth-child(1) {
         display: block;
       }
     }
     @include onDesktop {
       &:nth-child(1),
+      &:nth-child(2),
       &:nth-child(3),
-      &:nth-child(4),
-      &:nth-child(2) {
+      &:nth-child(4) {
         display: block;
       }
     }
