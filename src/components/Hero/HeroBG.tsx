@@ -14,6 +14,8 @@ export const HeroBG: FC<Props> = ({ imges }) => {
           className="hero-section__item"
           style={{
             backgroundImage: `url(${img})`,
+
+
           }}
         >
           {/* <img src={img} alt="" /> */}
