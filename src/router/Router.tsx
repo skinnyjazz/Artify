@@ -14,7 +14,7 @@ export const router = createBrowserRouter([
         element: <Home />,
       },
       {
-        path: "/Artify/:id",
+        path: "/Artify/:photoId",
         element: <PhotoPage />,
       },
     ],
