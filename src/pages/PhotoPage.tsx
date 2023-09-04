@@ -1,5 +1,5 @@
 import { useEffect, useState, useCallback } from "react";
-import { getPhoto, getPhotoStatistics } from "../api/api";
+import API from "../api/api";
 import { Photo, initialPhoto } from "../types/photo";
 import { UserCard } from "../components/userCard/UserCard";
 import Gallery from "../components/gallery/Gallery";
@@ -10,6 +10,9 @@ import Paper from "../components/ui/Paper/Paper";
 import { Tranding } from "../components/Tranding/Tranding";
 import UserInfo from "../components/ui/cardUserInfo/CardUserInfo";
 import { Link } from "react-router-dom";
+import { useAppDispatch, useAppSelector } from "../store/store";
+import { fetchPhoto } from "../store/reducers/photo/PhotosThunk";
+import { actions } from "../store/reducers/photo/PhotoSlice";
 
 export interface photoStatistics {
   downloads: {
@@ -33,20 +36,42 @@ const capitalize = (title: string) => {
 };
 
 const PhotoPage = () => {
-  const [photo, setPhoto] = useState<Photo>(initialPhoto);
-  const [isLoading, setIsLoading] = useState<boolean>(false);
-  const { photoId } = useParams();
+  const dispatch = useAppDispatch();
+  const { photo, isLoading, error } = useAppSelector(
+    ({ photoSlice }) => photoSlice
+  );
 
-  const loadPhoto = useCallback(async () => {
-    if (photoId) {
-      getPhoto(photoId).then(setPhoto);
-    }
-  }, [photoId]);
+  // const [photo, setPhoto] = useState<Photo>(initialPhoto);
+  // const [isLoading, setIsLoading] = useState<boolean>(false);
+  const { photoId } = useParams();
+  // console.log(photo);
+
+  // const loadPhoto = useCallback(async () => {
+  //   if (photoId) {
+  //     API.getPhoto(photoId).then(setPhoto);
+  //   }
+  // }, [photoId]);
 
   useEffect(() => {
-    loadPhoto();
-  }, [photoId, loadPhoto]);
+    console.log(photoId);
+    if (photoId) {
+      dispatch(fetchPhoto(photoId));
+    }
 
+    return () => {
+      console.log(photoId);
+      dispatch(actions.photoUnmount());
+    };
+  }, [photoId]);
+
+
+  // useEffect(() => {
+  //   console.log(photoId);
+  //   if (photoId) {
+  //     loadPhoto();
+  //   }
+
+  // }, [photoId]);
   const {
     id,
     blur_hash,
@@ -64,10 +89,10 @@ const PhotoPage = () => {
   } = photo;
 
   const title = capitalize(alt_description);
-  console.log(user);
+  // console.log(user);
   const { username, profile_image, bio } = user;
 
-  console.log(photo);
+  // console.log(photo);
   return (
     <>
       {/* {photo && !isLoading && ( */}

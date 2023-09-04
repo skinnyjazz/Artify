@@ -1,23 +1,21 @@
 import { useEffect, useMemo } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { useGalleryPagination } from "../hooks/useGalleryPagination";
-import { PhotoState, getPhotos } from "../store/reducers/photoCollectionState";
 import Gallery from "../components/gallery/Gallery";
 import { Hero } from "../components/Hero/Hero";
-import { heroSectionAssets } from "../assets/assets";
+import { useAppDispatch, useAppSelector } from "../store/store";
+import { actions } from "../store/reducers/PhotosCollection/PhotosSlice";
+import { fetchPhotos } from "../store/reducers/PhotosCollection/PhotosThunk";
+import { useGalleryPagination } from "../hooks/useGalleryPagination";
 
 export const Home = () => {
-  //@ts-ignore
-  const { page, photos } = useSelector((state) => state.photos);
-  const dispatch = useDispatch();
-
-
+  const dispatch = useAppDispatch();
+  const { photos, page, isLoading, error } = useAppSelector(
+    ({ photosCollectionSlice }) => photosCollectionSlice
+  );
 
   useEffect(() => {
-    dispatch(getPhotos({ page, perPage: 10 }));
-  }, [dispatch, page]);
-  console.log(photos);
-
+    dispatch(fetchPhotos({ page: String(page) }));
+  }, [page]);
   useGalleryPagination();
 
   return (

@@ -17,6 +17,14 @@ export const router = createBrowserRouter([
         path: "/Artify/:photoId",
         element: <PhotoPage />,
       },
+      {
+        path: "/Artify/search",
+        element: <Home />,
+      },
+      {
+        path: "/Artify/User/:userId",
+        element: <Home />,
+      },
     ],
   },
 ]);

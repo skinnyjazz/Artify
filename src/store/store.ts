@@ -1,20 +1,24 @@
-import createSagaMiddleware from "redux-saga";
 import { configureStore } from "@reduxjs/toolkit";
+import { useDispatch, TypedUseSelectorHook, useSelector } from "react-redux";
+import { combineReducers } from "redux";
 
-import photosReducer from "./reducers/photoCollectionState";
-import photoSaga from "./sagas/photoCollectionSaga";
+import photosCollectionSlice from "./reducers/PhotosCollection/PhotosSlice";
+import photoSlice from "./reducers/photo/PhotoSlice";
 
-const saga = createSagaMiddleware();
-
-export const store = configureStore({
-  reducer: {
-    photos: photosReducer,
-  },
-  middleware: [saga],
+const rootReducer = combineReducers({
+  photosCollectionSlice,
+  photoSlice,
 });
-saga.run(photoSaga);
 
-export type RootState = ReturnType<typeof store.getState>
-export type AppDispatch = typeof store.dispatch
+export const setupStore = () => {
+  return configureStore({
+    reducer: rootReducer,
+  });
+};
 
+export type RootState = ReturnType<typeof rootReducer>;
+export type AppStore = ReturnType<typeof setupStore>;
+export type AppDispatch = AppStore["dispatch"];
 
+export const useAppDispatch = () => useDispatch<AppDispatch>();
+export const useAppSelector: TypedUseSelectorHook<RootState> = useSelector;
