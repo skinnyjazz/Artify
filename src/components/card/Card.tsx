@@ -1,6 +1,6 @@
 import { FC } from "react";
 import LikeButton from "../ui/likeButton/LikeButton";
-import UserInfo from "../ui/userInfo/UserInfo";
+import CardUserInfo from "../ui/cardUserInfo/CardUserInfo";
 import { Photo } from "../../types/photo";
 import { Link } from "react-router-dom";
 
@@ -21,7 +21,7 @@ export const Card: FC<Props> = ({ cardSize, photo }) => {
       <div className="card__content">
         <div className="card__content-wrap">
           <LikeButton />
-          <UserInfo user={user} />
+          <CardUserInfo user={user} />
         </div>
       </div>
     </Link>

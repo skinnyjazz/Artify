@@ -1,9 +1,10 @@
 import { useEffect } from "react";
 import { useDispatch } from "react-redux/";
-import { incrementPage } from "../store/reducers/photoCollectionState";
+import { actions as PhotoSliceActions } from "../store/reducers/PhotosCollection/PhotosSlice";
 
 export const useGalleryPagination = () => {
   const dispatch = useDispatch();
+  const { incrementPage } = PhotoSliceActions;
 
   useEffect(() => {
     const handleScrole = () => {

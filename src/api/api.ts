@@ -2,16 +2,43 @@ import { photoStatistics } from "../pages/PhotoPage";
 import { Photo, PhotosCollection } from "../types/photo";
 import { client } from "./axiosClient";
 
-export const getPhotos = (page: number = 1, per_page: number = 10) => {
-  return client.get<PhotosCollection>(
-    `/photos?page=${page}&per_page=${per_page}`
-  );
+export type SearchParams = {
+  [key: string]: string;
 };
 
-export const getPhoto = (id: string) => {
+const getSearchWith = (params: SearchParams) => {
+  if (!params) {
+    return "";
+  }
+  const paramsArr: string[] = Object.entries(params).map(
+    ([key, value]) => `${key}=${value}`
+  );
+
+  return "?" + paramsArr.join("&");
+};
+
+const getPhotos = (
+  params: SearchParams = {
+    page: "1",
+    per_page: "10",
+  }
+) => {
+  return client.get<PhotosCollection>(`/photos${getSearchWith(params)}`);
+};
+
+const searchPhotos = (
+  params: SearchParams = { query: "", page: "1", per_page: "10" }
+) => {
+  return client.get<PhotosCollection>(`/search/photos${getSearchWith(params)}`);
+};
+
+const getPhoto = (id: string) => {
   return client.get<Photo>(`/photos/${id}`);
 };
 
-export const getPhotoStatistics = (id: string) => {
-  return client.get<photoStatistics>(`/photos/${id}/statistics`);
+const API = {
+  getPhotos,
+  getPhoto,
 };
+
+export default API;
